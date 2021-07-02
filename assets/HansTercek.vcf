@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.15.7//EN
+N:Tercek;Hans;;;
+FN:Hans Tercek
+EMAIL;type=INTERNET;type=HOME;type=pref:hans.tercek@gmail.com
+EMAIL;type=INTERNET;type=HOME:hans.tercek@gmail.com
+TEL;type=CELL;type=VOICE;type=pref:3107391738
+TEL;type=CELL;type=VOICE:3107391738
+item1.URL;type=pref:www.hanstercek.com
+item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:www.linkedin.com/in/hanstercek
+item2.X-ABLabel:_$!<Other>!$_
+item3.URL:www.linkedin.com/in/hanstercek
+item3.X-ABLabel:_$!<Other>!$_
+BDAY:1996-02-21
+END:VCARD
