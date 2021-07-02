@@ -64,7 +64,11 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     box-shadow: 3px 4px 4px 3px rgb(0 0 0 / 20%);
     white-space: normal;
     font-family: 'Cormorant Garamond', serif;
-
+    
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 .card-text {
@@ -74,6 +78,10 @@ a:nth-of-type(3) { color: var(--link-color-3) }
 .card-text a { color: black }
 .card_face * {
     margin: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 .card-text:nth-of-type(2) {
