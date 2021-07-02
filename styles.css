@@ -32,6 +32,10 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     height: var(--card-height);
     margin: 2rem;
     
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
     -webkit-transform-style: rotateY(180deg);
     -moz-transform-style: rotateY(180deg);
@@ -120,7 +124,13 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
 }
-#card-links a { transition: color 3s ease }
+#card-links a {
+    -webkit-transition: color 3s ease;
+    -moz-transition: color 3s ease;
+    -ms-transition: color 3s ease;
+    -o-transition: color 3s ease;
+    transition: color 3s ease;
+}
 #card-links a:hover {
     color: #fff;
 }
