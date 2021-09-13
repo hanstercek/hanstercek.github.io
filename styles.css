@@ -32,11 +32,11 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     height: var(--card-height);
     margin: 2rem;
     
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+    -webkit-transition: all 0.75s linear;
+    -moz-transition: all 0.75s linear;
+    -ms-transition: all 0.75s linear;
+    -o-transition: all 0.75s linear;
+    transition: all 0.75s linear;
     -webkit-transform-style: rotateY(180deg);
     -moz-transform-style: rotateY(180deg);
     -ms-transform-style: rotateY(180deg);
