@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: #4F927A;
+    --main-bg-color: rgb(113, 168, 149);
     --main-text-color: #F5E000;
     --link-color-1: #9E2E42;
     --link-color-2: #3254D1;
@@ -23,6 +23,53 @@ a:nth-of-type(2) { color: var(--link-color-2) }
 a:nth-of-type(3) { color: var(--link-color-3) }
 
 /* BODY CONTENT */
+
+#hando-cardo {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: var(--main-bg-color);
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+/* Hand */
+.hand, .thumb {
+    filter: grayscale(90%);
+}
+.hand {
+    position: absolute;
+        z-index: 1;
+        top: calc(50% + (var(--card-height) / 4));
+    height: calc(var(--card-width) * 1.4);
+    width: var(--card-width);
+}
+#hand-left {
+    left: 0;
+    background: no-repeat center / contain url('img/hand-left.png');
+}
+#hand-right {
+    right: 0;
+    background: no-repeat center / contain url('img/hand-right.png');
+}
+.thumb {
+    position: absolute;
+        z-index: 1;
+        top: calc(50% + (var(--card-height) / 4));
+        z-index: 99;
+    height: calc(var(--card-width) * 1.4);
+    width: var(--card-width);
+}
+#thumb-left {
+    background: no-repeat center / contain url('img/thumb-left.png');
+}
+#thumb-right {
+    background: no-repeat center / contain url('img/thumb-right.png');
+    right: 0;
+}
+
+/* Card */
 .card {
     position: absolute;
         left: calc(var(--card-width) - (var(--card-width) / 3));
@@ -31,12 +78,14 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     width: var(--card-width);
     height: var(--card-height);
     margin: 2rem;
+    text-shadow: 0.5px 0.5px rgba(0,0,0,0.5);
+
     
-    -webkit-transition: all 0.75s ease;
-    -moz-transition: all 0.75s ease;
-    -ms-transition: all 0.75s ease;
-    -o-transition: all 0.75s ease;
-    transition: all 0.75s ease;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
     -webkit-transform-style: rotateY(180deg);
     -moz-transform-style: rotateY(180deg);
     -ms-transform-style: rotateY(180deg);
@@ -61,13 +110,13 @@ a:nth-of-type(3) { color: var(--link-color-3) }
         box-sizing: border-box;
     background: url('img/paper-seamless.gif') repeat;
     border-radius: 1px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 3px 4px 4px 3px rgb(0 0 0 / 20%);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 1px 2px 4px 3px rgb(0 0 0 / 20%);
     white-space: normal;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'BIZ UDMincho', serif;
     
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -79,7 +128,7 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     padding: 2rem;
     margin: 0;
 }
-.card-text a { color: black }
+/* .card-text a { color: rgba(0,0,0,0.8) } */
 .card_face * {
     margin: 0;
     -webkit-backface-visibility: hidden;
@@ -94,11 +143,11 @@ a:nth-of-type(3) { color: var(--link-color-3) }
         bottom: 0;
         text-align: right;
 }
-.card-text h2 { 
-    font-family: 'Libre Franklin', sans-serif;
+.card-text h3 { 
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
 }
-.card-text > h5 { color: rgba(0,0,0,0.5) }
+.card-text > h5, .card-text > h6 { color: rgba(0,0,0,0.6) }
 #sign {
     position: absolute;
         right: 2rem;
@@ -107,7 +156,9 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     height: 100%;
     background: no-repeat center / contain url('img/sign.png')
 }
-
+.front-visible {
+    pointer-events: none;
+}
 .card--back {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
@@ -120,69 +171,19 @@ a:nth-of-type(3) { color: var(--link-color-3) }
 }
 #card-links {
     display: block;
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'BIZ UDMincho', serif;
+    
     font-weight: bold;
 }
 #card-links a {
-    -webkit-transition: color 2s ease;
-    -moz-transition: color 2s ease;
-    -ms-transition: color 2s ease;
-    -o-transition: color 2s ease;
-    transition: color 2s ease;
+    -webkit-transition: color 3s ease;
+    -moz-transition: color 3s ease;
+    -ms-transition: color 3s ease;
+    -o-transition: color 3s ease;
+    transition: color 3s ease;
 }
 #card-links a:hover {
     color: #fff;
-}
-h3::first-letter { font-size: 125% }
-
-section {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    background: var(--main-bg-color);
-    perspective: 1000px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hand, .thumb {
-    filter: grayscale(90%);
-}
-.hand {
-    position: absolute;
-        z-index: 1;
-        top: calc(50% + (var(--card-height) / 4));
-    height: calc(var(--card-width) * 1.4);
-    width: var(--card-width);
-    /* filter: drop-shadow(3px 4px 3px rgba(0,0,0,.2)); */
-}
-#hand-left {
-    left: 0;
-    background: no-repeat center / contain url('img/hand-left.png');
-}
-#hand-right {
-    right: 0;
-    background: no-repeat center / contain url('img/hand-right.png');
-}
-.thumb {
-    position: absolute;
-        z-index: 1;
-        top: calc(50% + (var(--card-height) / 4));
-        z-index: 99;
-    height: calc(var(--card-width) * 1.4);
-    width: var(--card-width);
-}
-#thumb-left {
-    background: no-repeat center / contain url('img/thumb-left.png');
-}
-#thumb-right {
-    background: no-repeat center / contain url('img/thumb-right.png');
-    right: 0;
 }
 
 @media (max-width: 950px) {
