@@ -80,25 +80,20 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     margin: 2rem;
     text-shadow: 0.5px 0.5px rgba(0,0,0,0.5);
 
-    
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -ms-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-    -webkit-transform-style: rotateY(180deg);
-    -moz-transform-style: rotateY(180deg);
-    -ms-transform-style: rotateY(180deg);
-    -o-transform-style: rotateY(180deg);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     transform-style: preserve-3d;
     cursor: pointer;
 }
 .card.is-flipped {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    -webkit-transform: rotateX(360deg) rotateY(180deg);
+    -moz-transform: rotateX(360deg) rotateY(180deg);
+    -ms-transform: rotateX(360deg) rotateY(180deg);
+    -o-transform: rotateX(360deg) rotateY(180deg);
+    transform: rotateX(360deg) rotateY(180deg);
     z-index: 50;
     left: calc(100% - (var(--card-width)*2) + (var(--card-width) / 3));
 
