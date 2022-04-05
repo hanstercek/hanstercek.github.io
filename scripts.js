@@ -8,10 +8,12 @@ for( var i=els.length; i--; ) {
 
 // Flip card
 let card = document.querySelector('.card');
+let cardFront = document.querySelector('.card--front');
 card.addEventListener( 'click', function() {
     if (clicked === 1) {
         clicked = 0;
     } else {
         card.classList.toggle('is-flipped');
+        cardFront.classList.toggle('front-visible');
     }
 });
