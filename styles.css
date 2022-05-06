@@ -37,6 +37,7 @@ a:nth-of-type(3) { color: var(--link-color-3) }
 /* Hand */
 .hand, .thumb {
     filter: grayscale(90%);
+    pointer-events: none;
 }
 .hand {
     position: absolute;
