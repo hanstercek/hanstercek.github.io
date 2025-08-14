@@ -105,7 +105,8 @@ a:nth-of-type(3) { color: var(--link-color-3) }
     -o-transform: rotateX(360deg) rotateY(180deg);
     transform: rotateX(360deg) rotateY(180deg);
     z-index: 50;
-    left: calc(100% - (var(--card-width)*2) + (var(--card-width) / 3));
+    left: calc(100% - (var(--card-width)*2) + (var(--card-width) / 4));
+    top: calc((var(--card-height) * 1.6));
 
 }
 .card_face {
